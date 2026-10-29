@@ -31,7 +31,7 @@ body { color: var(--color-fg); -webkit-font-smoothing: antialiased; }
 <div class="page">
 <script>
 (function () {
-  const DATA = {"edm_monthly": [{"label": "Aug", "axis": "Aug-26", "sent": 119534, "delivered": 119274, "open_rate": 0.10757583379445645, "click_rate": 0.0050555862970974395, "campaigns": 20}, {"label": "Sep", "axis": "Sep 1–29", "sent": 133643, "delivered": 133374, "open_rate": 0.10890428419332104, "click_rate": 0.0034114595048510203, "campaigns": 25}, {"label": "Oct", "axis": "Oct 1–29", "sent": 85910, "delivered": 85707, "open_rate": 0.10776249314525067, "click_rate": 0.005332119896857899, "campaigns": 18}], "web_monthly": [{"label": "Aug", "axis": "Aug-26", "days": 31, "page_views": 35040, "views_per_day": 1130.3225806451612, "direct_sessions": 8302, "email_sessions": 1353, "paid_search_sessions": 5106, "direct_share": 0.4105023734177215, "email_share": 0.06690071202531644, "paid_search_share": 0.2524723101265823}, {"label": "Sep", "axis": "Sep 1–29", "days": 29, "page_views": 28866, "views_per_day": 995.3793103448276, "direct_sessions": 4680, "email_sessions": 966, "paid_search_sessions": 5460, "direct_share": 0.30079053923774024, "email_share": 0.06208625232984125, "paid_search_share": 0.3509222957773636}, {"label": "Oct", "axis": "Oct 1–29", "days": 29, "page_views": 29010, "views_per_day": 1000.3448275862069, "direct_sessions": 6866, "email_sessions": 824, "paid_search_sessions": 4460, "direct_share": 0.4170817640626898, "email_share": 0.05005467136435427, "paid_search_share": 0.27092698335560683}], "ads_monthly": [{"label": "Aug", "axis": "Aug-26", "days": 31, "spend": 21953.19, "clicks": 5778, "conversions": 332.57, "impressions": 181868, "cpa": 66.01073458219322, "conv_rate": 0.05755797853928696, "spend_per_day": 708.1674193548388, "conv_per_day": 10.728064516129034, "impressions_per_day": 5866.709677419355}, {"label": "Sep", "axis": "Sep 1–29", "days": 29, "spend": 30043.89, "clicks": 6329, "conversions": 338.61, "impressions": 200854, "cpa": 88.72711969522459, "conv_rate": 0.05350134302417444, "spend_per_day": 1035.9962068965517, "conv_per_day": 11.676206896551724, "impressions_per_day": 6926}, {"label": "Oct", "axis": "Oct 1–29", "days": 29, "spend": 27342.94, "clicks": 5103, "conversions": 329.75, "impressions": 226459, "cpa": 82.92021228203184, "conv_rate": 0.0646188516558887, "spend_per_day": 942.8599999999999, "conv_per_day": 11.370689655172415, "impressions_per_day": 7808.931034482759}], "cash_monthly": [{"label": "Aug", "axis": "Aug-26", "days": 31, "booking_value": 84797.35, "qld": 54424, "nsw": 19617.35, "vic": 10756, "value_per_day": 2735.3983870967745}, {"label": "Sep", "axis": "Sep-26", "days": 30, "booking_value": 125540.29, "qld": 58720.69, "nsw": 31354.6, "vic": 35465, "value_per_day": 4184.676333333334}, {"label": "Oct", "axis": "Oct 1–28", "days": 28, "booking_value": 99269.32, "qld": 57400.32, "nsw": 10905, "vic": 30964, "value_per_day": 3545.3328571428574}]};
+  const DATA = {"edm_monthly": [{"label": "Aug", "axis": "Aug-26", "sent": 119534, "delivered": 119274, "open_rate": 0.10757583379445645, "click_rate": 0.0050555862970974395, "campaigns": 20}, {"label": "Sep", "axis": "Sep 1–29", "sent": 133643, "delivered": 133374, "open_rate": 0.10890428419332104, "click_rate": 0.0034114595048510203, "campaigns": 25}, {"label": "Oct", "axis": "Oct 1–29", "sent": 85910, "delivered": 85707, "open_rate": 0.10776249314525067, "click_rate": 0.005332119896857899, "campaigns": 18}], "web_monthly": [{"label": "Aug", "axis": "Aug-26", "days": 31, "page_views": 35040, "views_per_day": 1130.3225806451612, "direct_sessions": 8302, "email_sessions": 1353, "paid_search_sessions": 5106, "direct_share": 0.4105023734177215, "email_share": 0.06690071202531644, "paid_search_share": 0.2524723101265823}, {"label": "Sep", "axis": "Sep 1–29", "days": 29, "page_views": 28866, "views_per_day": 995.3793103448276, "direct_sessions": 4680, "email_sessions": 966, "paid_search_sessions": 5460, "direct_share": 0.30079053923774024, "email_share": 0.06208625232984125, "paid_search_share": 0.3509222957773636}, {"label": "Oct", "axis": "Oct 1–29", "days": 29, "page_views": 29010, "views_per_day": 1000.3448275862069, "direct_sessions": 6866, "email_sessions": 824, "paid_search_sessions": 4460, "direct_share": 0.4170817640626898, "email_share": 0.05005467136435427, "paid_search_share": 0.27092698335560683}], "ads_monthly": [{"label": "Aug", "axis": "Aug-26", "days": 31, "spend": 21953.19, "clicks": 5778, "conversions": 332.57, "impressions": 181868, "cpa": 66.01073458219322, "conv_rate": 0.05755797853928696, "spend_per_day": 708.1674193548388, "conv_per_day": 10.728064516129034, "impressions_per_day": 5866.709677419355}, {"label": "Sep", "axis": "Sep 1–29", "days": 29, "spend": 30043.89, "clicks": 6329, "conversions": 338.61, "impressions": 200854, "cpa": 88.72711969522459, "conv_rate": 0.05350134302417444, "spend_per_day": 1035.9962068965517, "conv_per_day": 11.676206896551724, "impressions_per_day": 6926}, {"label": "Oct", "axis": "Oct 1–29", "days": 29, "spend": 27342.94, "clicks": 5103, "conversions": 329.75, "impressions": 226459, "cpa": 82.92021228203184, "conv_rate": 0.0646188516558887, "spend_per_day": 942.8599999999999, "conv_per_day": 11.370689655172415, "impressions_per_day": 7808.931034482759}], "cash_monthly": [{"label": "Aug", "axis": "Aug-26", "days": 31, "booking_value": 84797.35, "qld": 54424, "nsw": 19617.35, "vic": 10756, "value_per_day": 2735.3983870967745}, {"label": "Sep", "axis": "Sep-26", "days": 30, "booking_value": 125540.29, "qld": 58720.69, "nsw": 31354.6, "vic": 35465, "value_per_day": 4184.676333333334}, {"label": "Oct", "axis": "Oct 1–28", "days": 28, "booking_value": 99269.32, "qld": 57400.32, "nsw": 10905, "vic": 30964, "value_per_day": 3545.3328571428574}], "oct_split": [{"key": "hr", "category": "High Risk", "spend": 12857.47, "conversions": 138.43}, {"key": "hs", "category": "Health & Safety", "spend": 7083.76, "conversions": 79.75}, {"key": "other", "category": "Other", "spend": 7170.5, "conversions": 111.59}], "oct_groups_hr": [{"ad_group": "Forklift", "states": "NSW, QLD, VIC", "spend": 5011.16, "conversions": 42.64, "cpa": 117.52}, {"ad_group": "High Risk Work Licences", "states": "QLD, VIC", "spend": 2696.76, "conversions": 23.0, "cpa": 117.25}, {"ad_group": "Rigging Basic", "states": "QLD, VIC", "spend": 1468.93, "conversions": 22.07, "cpa": 66.56}, {"ad_group": "Dogging", "states": "QLD, VIC", "spend": 1414.08, "conversions": 24.52, "cpa": 57.67}, {"ad_group": "Gantry Crane †", "states": "NSW, QLD", "spend": 533.21, "conversions": 3.0, "cpa": 177.74}, {"ad_group": "Boom >11M", "states": "NSW, QLD", "spend": 430.04, "conversions": 6.0, "cpa": 71.67}, {"ad_group": "C6 Crane", "states": "NSW, QLD", "spend": 322.98, "conversions": 3.0, "cpa": 107.66}, {"ad_group": "Non-Slewing Telehandler – TV Licence", "states": "VIC", "spend": 264.67, "conversions": 0.21, "cpa": 1260.33}, {"ad_group": "C6 Course", "states": "VIC", "spend": 198.06, "conversions": 7.0, "cpa": 28.29}, {"ad_group": "Vehicle Loading Crane (CV) >10M", "states": "NSW, QLD", "spend": 126.34, "conversions": 0, "cpa": null}, {"ad_group": "Rigging Intermediate", "states": "QLD", "spend": 124.21, "conversions": 3.0, "cpa": 41.4}, {"ad_group": "Reach Stacker", "states": "NSW, QLD", "spend": 108.12, "conversions": 2.99, "cpa": 36.16}, {"ad_group": "Forklift – Course Code", "states": "NSW, QLD", "spend": 69.2, "conversions": 1.0, "cpa": 69.2}, {"ad_group": "Scaffolding Basic", "states": "QLD", "spend": 56.35, "conversions": 0, "cpa": null}, {"ad_group": "Personnel & Materials Hoist", "states": "QLD", "spend": 27.86, "conversions": 0, "cpa": null}, {"ad_group": "Mobile Crane – CN Licence", "states": "QLD", "spend": 5.5, "conversions": 0, "cpa": null}], "oct_groups_hs": [{"ad_group": "Work at Heights NAT", "states": "National", "spend": 1191.34, "conversions": 15.5, "cpa": 76.86}, {"ad_group": "First Aid Including CPR", "states": "VIC", "spend": 1036.43, "conversions": 12.0, "cpa": 86.37}, {"ad_group": "Confined Space (2 Day)", "states": "NSW", "spend": 872.88, "conversions": 9.0, "cpa": 96.99}, {"ad_group": "CPR & LVR", "states": "QLD", "spend": 723.43, "conversions": 4.0, "cpa": 180.86}, {"ad_group": "Confined Space (1 Day)", "states": "NSW, QLD", "spend": 544.52, "conversions": 2.68, "cpa": 203.18}, {"ad_group": "Work As A Safety Observer/Spotter", "states": "NSW", "spend": 531.09, "conversions": 5.0, "cpa": 106.22}, {"ad_group": "Work Safety At Heights (paused)", "states": "NSW, QLD", "spend": 380.76, "conversions": 1.0, "cpa": 380.76}, {"ad_group": "Spotting Course", "states": "VIC", "spend": 375.47, "conversions": 6.07, "cpa": 61.86}, {"ad_group": "Health & Safety Representative", "states": "QLD", "spend": 310.25, "conversions": 1.0, "cpa": 310.25}, {"ad_group": "Remove Non-Friable Asbestos", "states": "VIC", "spend": 293.55, "conversions": 2.0, "cpa": 146.78}, {"ad_group": "Enter and Work in Confined Spaces", "states": "VIC", "spend": 270.76, "conversions": 9.5, "cpa": 28.5}, {"ad_group": "Telehandler (moved from High Risk)", "states": "NSW, QLD", "spend": 187.35, "conversions": 1.0, "cpa": 187.35}, {"ad_group": "Electrical ‘Safety Observer’", "states": "QLD", "spend": 130.13, "conversions": 2.0, "cpa": 65.06}, {"ad_group": "Extinguish Gas Fire", "states": "VIC", "spend": 114.61, "conversions": 4.0, "cpa": 28.65}, {"ad_group": "Working at Heights (paused)", "states": "VIC", "spend": 46.75, "conversions": 1.0, "cpa": 46.75}, {"ad_group": "EWP Escape & Rescue", "states": "NSW", "spend": 40.77, "conversions": 1.0, "cpa": 40.77}, {"ad_group": "Breathing Apparatus", "states": "VIC", "spend": 18.88, "conversions": 3.0, "cpa": 6.29}, {"ad_group": "Electrical Safety Observer/Spotter", "states": "VIC", "spend": 14.79, "conversions": 0, "cpa": null}], "oct_gantry": [{"scenario": "Gantry Crane linked to Overhead Gantry Crane (RIIHAN305D)", "hr_spend": 12324.26, "hr_conversions": 135.43, "hr_cpa": 91.0, "hr_share": 0.4545729837232814, "hs_spend": 7616.97, "hs_conversions": 82.75, "hs_cpa": 92.05, "hs_share": 0.28094739804505287}]};
   const calcs = {};
   window.dash = {
     data: (id) => (id in DATA ? { status: 'ok', data: DATA[id] } : id in calcs ? { status: 'ok', data: calcs[id] } : { status: 'missing', data: [] }),
@@ -88,6 +88,21 @@ body { color: var(--color-fg); -webkit-font-smoothing: antialiased; }
 .kb-sec-line { font-size: 13.5px; color: var(--color-fg-muted); margin: 0; }
 .kb-sec-line b { font-weight: 600; color: var(--color-fg); }
 .kb-sec .kb-grid { margin-top: 0; }
+.kb-sec .kb-grid + .kb-subhead { margin-top: 30px; }
+.kb-subhead { margin: 0 0 14px; }
+.kb-sec .kb-grid + .kb-grid { margin-top: 22px; }
+.kb-scroll { max-height: 360px; overflow: auto; border-top: 1px solid var(--color-border-line); }
+.kb-tbl { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.kb-tbl th { position: sticky; top: 0; background: var(--color-panel); text-align: right; font-weight: 500; color: var(--color-fg-muted); padding: 8px 8px; border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+.kb-tbl th:first-child, .kb-tbl td:first-child { text-align: left; }
+.kb-tbl th:nth-child(2), .kb-tbl td:nth-child(2) { text-align: left; }
+.kb-tbl td { padding: 7px 8px; border-bottom: 1px solid var(--color-border-line); text-align: right; }
+.kb-tbl td:first-child { font-weight: 500; }
+.kb-tbl td:nth-child(2) { color: var(--color-fg-muted); }
+.kb-subtitle { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 18px; margin: 0 0 4px; }
+.kb-subline { font-size: 13.5px; color: var(--color-fg-muted); margin: 0; }
+.kb-subline b { font-weight: 600; color: var(--color-fg); }
+.kb-val-in { font-size: 11px; font-weight: 600; fill: var(--color-bg); text-anchor: middle; font-family: var(--font-anthropic-sans); }
 .kb-grid.c2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); }
 .kb-grid.c3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
 .kb-grid { margin-top: 34px; display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
@@ -206,7 +221,12 @@ body { color: var(--color-fg); -webkit-font-smoothing: antialiased; }
         <h2 class="kb-sec-title">Google Ads</h2>
         <p class="kb-sec-line">vs September: spend <b><span data-source="kpi" data-field="change" data-fmt="spct1" data-where="metric=Google Ads Spend">—</span></b>, CPA <b><span data-source="kpi" data-field="change" data-fmt="spct1" data-where="metric=Google Ads CPA">—</span></b></p>
       </div>
-      <div class="kb-grid c3">
+      <div class="kb-grid c2">
+        <div class="kb-panel">
+          <h2 class="kb-title">Spend by month</h2>
+          <p class="kb-sub">Account total (August is the full month, September and October are 1&ndash;29)</p>
+          <div class="kb-chart dash-skeleton" id="chart-ads-spend-month" data-source="ads_monthly"></div>
+        </div>
         <div class="kb-panel">
           <h2 class="kb-title">Spend per day by month</h2>
           <p class="kb-sub">Account total, daily average</p>
@@ -221,6 +241,34 @@ body { color: var(--color-fg); -webkit-font-smoothing: antialiased; }
           <h2 class="kb-title">Impressions per day by month</h2>
           <p class="kb-sub">Account total, daily average</p>
           <div class="kb-chart dash-skeleton" id="chart-ads-impr" data-source="ads_monthly"></div>
+        </div>
+      </div>
+      <div class="kb-subhead">
+        <h3 class="kb-subtitle">High Risk vs Health &amp; Safety</h3>
+        <p class="kb-subline">October (1&ndash;29th): High Risk is <b><span data-source="split" data-field="spend_share" data-fmt="pct1" data-where="key=hr">—</span></b> of spend and <b><span data-source="split" data-field="conv_share" data-fmt="pct1" data-where="key=hr">—</span></b> of conversions, at <b><span data-source="split" data-field="cpa" data-fmt="usd2" data-where="key=hr">—</span></b> per conversion. Health &amp; Safety is <b><span data-source="split" data-field="spend_share" data-fmt="pct1" data-where="key=hs">—</span></b> of spend and <b><span data-source="split" data-field="conv_share" data-fmt="pct1" data-where="key=hs">—</span></b> of conversions, at <b><span data-source="split" data-field="cpa" data-fmt="usd2" data-where="key=hs">—</span></b>. Other is <b><span data-source="split" data-field="spend_share" data-fmt="pct1" data-where="key=other">—</span></b> of spend and <b><span data-source="split" data-field="conv_share" data-fmt="pct1" data-where="key=other">—</span></b> of conversions, at <b><span data-source="split" data-field="cpa" data-fmt="usd2" data-where="key=other">—</span></b>.</p>
+      </div>
+      <div class="kb-grid c2">
+        <div class="kb-panel">
+          <h2 class="kb-title">Share of spend and conversions</h2>
+          <p class="kb-sub">Google Ads, October (1&ndash;29th), by ad group</p>
+          <div class="kb-chart dash-skeleton" id="chart-ads-split" data-source="split"></div>
+        </div>
+        <div class="kb-panel">
+          <h2 class="kb-title">Cost per conversion by category</h2>
+          <p class="kb-sub">Google Ads, October (1&ndash;29th), against the account average</p>
+          <div class="kb-chart dash-skeleton" id="chart-ads-cpa-cat" data-source="split"></div>
+        </div>
+      </div>
+      <div class="kb-grid c2">
+        <div class="kb-panel">
+          <h2 class="kb-title">High Risk ad groups</h2>
+          <p class="kb-sub">By spend. &dagger; Gantry Crane is counted as High Risk. If it links to Overhead Gantry Crane (RIIHAN305D) it moves to Health &amp; Safety: High Risk would be <span data-source="oct_gantry" data-field="hr_share" data-fmt="pct1" data-row="0">&mdash;</span> of spend at <span data-source="oct_gantry" data-field="hr_cpa" data-fmt="usd2" data-row="0">&mdash;</span> per conversion, and Health &amp; Safety <span data-source="oct_gantry" data-field="hs_share" data-fmt="pct1" data-row="0">&mdash;</span> at <span data-source="oct_gantry" data-field="hs_cpa" data-fmt="usd2" data-row="0">&mdash;</span>.</p>
+          <div class="kb-scroll"><table class="kb-tbl" id="tbl-hr" data-source="oct_groups_hr" data-row-key="ad_group"><thead><tr><th data-field="ad_group">Ad group</th><th data-field="states">States</th><th data-field="spend">Spend</th><th data-field="conversions">Conv.</th><th data-field="cpa">CPA</th></tr></thead><tbody></tbody></table></div>
+        </div>
+        <div class="kb-panel">
+          <h2 class="kb-title">Health &amp; Safety ad groups</h2>
+          <p class="kb-sub">By spend</p>
+          <div class="kb-scroll"><table class="kb-tbl" id="tbl-hs" data-source="oct_groups_hs" data-row-key="ad_group"><thead><tr><th data-field="ad_group">Ad group</th><th data-field="states">States</th><th data-field="spend">Spend</th><th data-field="conversions">Conv.</th><th data-field="cpa">CPA</th></tr></thead><tbody></tbody></table></div>
         </div>
       </div>
     </div>
@@ -482,6 +530,101 @@ body { color: var(--color-fg); -webkit-font-smoothing: antialiased; }
     addLegend(el, series.map((s) => ({ name: s.name, color: s.color })));
   }
 
+  const CAT_COLORS = { hr: 'var(--kb-navy)', hs: 'var(--kb-teal)', other: 'var(--kb-yellow)' };
+  const CAT_LABEL_FILL = { hr: 'var(--color-bg)', hs: 'var(--color-bg)', other: '#0F2233' };
+
+  function splitChart(el, rows) {
+    const H = 250, top = 12, bottom = 40, mr = 8;
+    const fr = frame(el, H);
+    const W = fr.W, svg = fr.svg;
+    svg.attr('role', 'img').attr('aria-label', 'Share of Google Ads spend and conversions by category');
+    const y = d3.scaleLinear([0, 1], [H - bottom, top]);
+    const ticks = [0, 0.25, 0.5, 0.75, 1];
+    const pct0 = d3.format('.0%');
+    const ml = Math.ceil(textWidth(svg, ticks.map((t) => pct0(t)))) + 12;
+    const metrics = [{ key: 'spend', share: 'spend_share', name: 'Spend' }, { key: 'conversions', share: 'conv_share', name: 'Conversions' }];
+    const x = d3.scaleBand(metrics.map((m) => m.key), [ml, W - mr]).padding(0.4);
+    const bw = Math.min(x.bandwidth(), 120);
+    const tip = makeTip(el);
+    svg.append('g').selectAll('line').data(ticks).join('line')
+      .attr('x1', ml).attr('x2', W - mr).attr('y1', (d) => y(d)).attr('y2', (d) => y(d))
+      .style('stroke', 'var(--cds-chart-grid)').attr('stroke-width', 1);
+    svg.append('g').selectAll('text').data(ticks).join('text')
+      .attr('class', 'kb-tick').attr('x', ml - 8).attr('y', (d) => y(d)).attr('dy', '0.32em')
+      .attr('text-anchor', 'end').text((d) => pct0(d));
+    metrics.forEach((m) => {
+      const bx = x(m.key) + (x.bandwidth() - bw) / 2;
+      let acc = 0;
+      rows.forEach((r) => {
+        const s = r[m.share];
+        const y0 = y(acc + s), y1 = y(acc);
+        const val = m.key === 'spend' ? f.usd0(r.spend) : f.dec1(r.conversions) + ' conversions';
+        svg.append('rect').attr('x', bx).attr('width', bw).attr('y', y0).attr('height', y1 - y0)
+          .style('fill', CAT_COLORS[r.key])
+          .on('pointermove', (evt) => tip.show(evt, m.name, rows.map((q) => ({
+            color: CAT_COLORS[q.key],
+            text: q.category + ': ' + (m.key === 'spend' ? f.usd0(q.spend) : f.dec1(q.conversions) + ' conversions') + ' (' + f.pct1(q[m.share]) + ')'
+          })).concat([{ text: 'Cost per conversion, ' + r.category + ': ' + f.usd2(r.cpa) }])))
+          .on('pointerleave', () => tip.hide());
+        if (s >= 0.06) svg.append('text').attr('class', 'kb-val-in').style('fill', CAT_LABEL_FILL[r.key])
+          .attr('x', bx + bw / 2).attr('y', (y0 + y1) / 2).attr('dy', '0.35em').text(f.pct1(s));
+        acc += s;
+      });
+      svg.append('text').attr('class', 'kb-tick').attr('x', bx + bw / 2).attr('y', H - 14).attr('text-anchor', 'middle').text(m.name);
+    });
+    addLegend(el, rows.map((r) => ({ name: r.category, color: CAT_COLORS[r.key] })));
+  }
+
+  function catCpaChart(el, rows) {
+    const H = 232, top = 24, bottom = 26, mr = 8;
+    const fr = frame(el, H);
+    const W = fr.W, svg = fr.svg;
+    svg.attr('role', 'img').attr('aria-label', 'Google Ads cost per conversion by category');
+    const avg = rows.reduce((s, r) => s + r.spend, 0) / rows.reduce((s, r) => s + r.conversions, 0);
+    const y = d3.scaleLinear([0, d3.max(rows, (r) => r.cpa) * 1.15], [H - bottom, top]).nice(4);
+    const ticks = y.ticks(4);
+    const ml = Math.ceil(textWidth(svg, ticks.map((t) => f.usd0(t)))) + 12;
+    const x = d3.scaleBand(rows.map((r) => r.key), [ml, W - mr]).padding(0.4);
+    const bw = Math.min(x.bandwidth(), 90);
+    const tip = makeTip(el);
+    svg.append('g').selectAll('line').data(ticks).join('line')
+      .attr('x1', ml).attr('x2', W - mr).attr('y1', (d) => y(d)).attr('y2', (d) => y(d))
+      .style('stroke', 'var(--cds-chart-grid)').attr('stroke-width', 1);
+    svg.append('g').selectAll('text').data(ticks).join('text')
+      .attr('class', 'kb-tick').attr('x', ml - 8).attr('y', (d) => y(d)).attr('dy', '0.32em')
+      .attr('text-anchor', 'end').text((d) => f.usd0(d));
+    svg.append('g').selectAll('rect').data(rows).join('rect')
+      .attr('x', (r) => x(r.key) + (x.bandwidth() - bw) / 2).attr('width', bw)
+      .attr('y', (r) => y(r.cpa)).attr('height', (r) => y(0) - y(r.cpa)).attr('rx', 3)
+      .style('fill', (r) => CAT_COLORS[r.key])
+      .on('pointermove', (evt, r) => tip.show(evt, r.category, [{ text: f.usd2(r.cpa) + ' per conversion' }, { text: f.usd0(r.spend) + ' spend, ' + f.dec1(r.conversions) + ' conversions' }]))
+      .on('pointerleave', () => tip.hide());
+    svg.append('line').attr('x1', ml).attr('x2', W - mr).attr('y1', y(avg)).attr('y2', y(avg))
+      .style('stroke', 'var(--cds-chart-reference)').attr('stroke-width', 2).attr('stroke-dasharray', '6 4');
+    svg.append('g').selectAll('text').data(rows).join('text')
+      .attr('class', 'kb-val').attr('x', (r) => x(r.key) + x.bandwidth() / 2).attr('y', (r) => y(r.cpa) - 7).text((r) => f.usd0(r.cpa));
+    svg.append('g').selectAll('text').data(rows).join('text')
+      .attr('class', 'kb-tick').attr('x', (r) => x(r.key) + x.bandwidth() / 2).attr('y', H - 8).attr('text-anchor', 'middle').text((r) => r.category);
+    addLegend(el, rows.map((r) => ({ name: r.category, color: CAT_COLORS[r.key] })).concat([{ name: 'Account average ' + f.usd0(avg), line: true }]));
+  }
+
+  function renderGroups(sel, id) {
+    const tb = root.querySelector(sel + ' tbody');
+    const d = dash.data(id);
+    if (d.status !== 'ok') { tb.replaceChildren(); return; }
+    const rows = d.data.map((r) => {
+      const tr = document.createElement('tr');
+      tr.dataset.key = r.ad_group;
+      [r.ad_group, r.states, f.usd0(r.spend), f.dec1(r.conversions), r.cpa === null || r.cpa === undefined ? 'n/a' : f.usd0(r.cpa)].forEach((t) => {
+        const td = document.createElement('td');
+        td.textContent = t;
+        tr.appendChild(td);
+      });
+      return tr;
+    });
+    tb.replaceChildren(...rows);
+  }
+
   const kTick = (v) => (v === 0 ? '0' : d3.format(',')(v / 1000) + 'k');
 
   function drawDashboard() {
@@ -511,6 +654,11 @@ body { color: var(--color-fg); -webkit-font-smoothing: antialiased; }
       { key: 'nsw', name: 'NSW', color: 'var(--kb-teal)' },
       { key: 'vic', name: 'VIC', color: 'var(--kb-yellow)' }
     ], { name: 'Booking value by state', tick: kTick, label: (v) => '$' + d3.format('.1f')(v / 1000) + 'k', line: (s, r) => s.name + ': ' + f.usd0(r[s.key]) }));
+    one('#chart-ads-split', ['split'], (el, rows) => splitChart(el, rows));
+    one('#chart-ads-cpa-cat', ['split'], (el, rows) => catCpaChart(el, rows));
+    one('#chart-ads-spend-month', ['ads_monthly'], (el, rows) => barChart(el, rows, {
+      y: 'spend', name: 'Ad spend', fmt: f.usd0, tick: (v) => f.usd0(v), tip: (r) => f.usd0(r.spend) + ' total spend'
+    }));
     one('#chart-ads-spend', ['ads_monthly'], (el, rows) => barChart(el, rows, {
       y: 'spend_per_day', name: 'Ad spend per day', fmt: f.usd0, tick: (v) => f.usd0(v), tip: (r) => f.usd0(r.spend_per_day) + ' a day'
     }));
@@ -526,6 +674,8 @@ body { color: var(--color-fg); -webkit-font-smoothing: antialiased; }
     detectTheme();
     fillMarks();
     renderKpi();
+    renderGroups('#tbl-hr', 'oct_groups_hr');
+    renderGroups('#tbl-hs', 'oct_groups_hs');
     drawDashboard();
   }
 
@@ -537,6 +687,20 @@ body { color: var(--color-fg); -webkit-font-smoothing: antialiased; }
   };
   new MutationObserver(again).observe(document.documentElement, { attributes: true, attributeFilter: ['class', 'style', 'data-theme', 'data-color-scheme'] });
   if (window.matchMedia) window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', again);
+
+  dash.calc('split', {
+    inputs: ['oct_split'],
+    title: 'Spend and conversion shares',
+    description: 'Each category’s share of October Google Ads spend and conversions, and its cost per conversion.',
+    fn: (oct_split) => {
+      const spend = oct_split.reduce((s, r) => s + r.spend, 0);
+      const conv = oct_split.reduce((s, r) => s + r.conversions, 0);
+      return oct_split.map((r) => ({
+        key: r.key, category: r.category, spend: r.spend, conversions: r.conversions,
+        spend_share: r.spend / spend, conv_share: r.conversions / conv, cpa: r.spend / r.conversions
+      }));
+    }
+  });
 
   dash.calc('kpi', {
     inputs: ['edm_monthly', 'ads_monthly', 'cash_monthly', 'web_monthly'],
