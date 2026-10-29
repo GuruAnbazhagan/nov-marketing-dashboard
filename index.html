@@ -29,7 +29,6 @@ body { color: var(--color-fg); -webkit-font-smoothing: antialiased; }
 </head>
 <body>
 <div class="page">
-
 <script>
 (function () {
   const DATA = {"edm_monthly": [{"label": "Aug", "axis": "Aug-26", "sent": 119534, "delivered": 119274, "open_rate": 0.10757583379445645, "click_rate": 0.0050555862970974395, "campaigns": 20}, {"label": "Sep", "axis": "Sep 1–29", "sent": 133643, "delivered": 133374, "open_rate": 0.10890428419332104, "click_rate": 0.0034114595048510203, "campaigns": 25}, {"label": "Oct", "axis": "Oct 1–29", "sent": 85910, "delivered": 85707, "open_rate": 0.10776249314525067, "click_rate": 0.005332119896857899, "campaigns": 18}], "web_monthly": [{"label": "Aug", "axis": "Aug-26", "days": 31, "page_views": 35040, "views_per_day": 1130.3225806451612, "direct_sessions": 8302, "email_sessions": 1353, "paid_search_sessions": 5106, "direct_share": 0.4105023734177215, "email_share": 0.06690071202531644, "paid_search_share": 0.2524723101265823}, {"label": "Sep", "axis": "Sep 1–29", "days": 29, "page_views": 28866, "views_per_day": 995.3793103448276, "direct_sessions": 4680, "email_sessions": 966, "paid_search_sessions": 5460, "direct_share": 0.30079053923774024, "email_share": 0.06208625232984125, "paid_search_share": 0.3509222957773636}, {"label": "Oct", "axis": "Oct 1–29", "days": 29, "page_views": 29010, "views_per_day": 1000.3448275862069, "direct_sessions": 6866, "email_sessions": 824, "paid_search_sessions": 4460, "direct_share": 0.4170817640626898, "email_share": 0.05005467136435427, "paid_search_share": 0.27092698335560683}], "ads_monthly": [{"label": "Aug", "axis": "Aug-26", "days": 31, "spend": 21953.19, "clicks": 5778, "conversions": 332.57, "impressions": 181868, "cpa": 66.01073458219322, "conv_rate": 0.05755797853928696, "spend_per_day": 708.1674193548388, "conv_per_day": 10.728064516129034, "impressions_per_day": 5866.709677419355}, {"label": "Sep", "axis": "Sep 1–29", "days": 29, "spend": 30043.89, "clicks": 6329, "conversions": 338.61, "impressions": 200854, "cpa": 88.72711969522459, "conv_rate": 0.05350134302417444, "spend_per_day": 1035.9962068965517, "conv_per_day": 11.676206896551724, "impressions_per_day": 6926}, {"label": "Oct", "axis": "Oct 1–29", "days": 29, "spend": 27342.94, "clicks": 5103, "conversions": 329.75, "impressions": 226459, "cpa": 82.92021228203184, "conv_rate": 0.0646188516558887, "spend_per_day": 942.8599999999999, "conv_per_day": 11.370689655172415, "impressions_per_day": 7808.931034482759}], "cash_monthly": [{"label": "Aug", "axis": "Aug-26", "days": 31, "booking_value": 84797.35, "qld": 54424, "nsw": 19617.35, "vic": 10756, "value_per_day": 2735.3983870967745}, {"label": "Sep", "axis": "Sep-26", "days": 30, "booking_value": 125540.29, "qld": 58720.69, "nsw": 31354.6, "vic": 35465, "value_per_day": 4184.676333333334}, {"label": "Oct", "axis": "Oct 1–28", "days": 28, "booking_value": 99269.32, "qld": 57400.32, "nsw": 10905, "vic": 30964, "value_per_day": 3545.3328571428574}]};
@@ -102,6 +101,7 @@ body { color: var(--color-fg); -webkit-font-smoothing: antialiased; }
 .kb-chart { position: relative; min-height: 262px; }
 .kb-chart svg { display: block; overflow: visible; }
 .kb-tick { font-size: 11px; fill: var(--color-fg-muted); font-family: var(--font-anthropic-sans); }
+.kb-val-sm { font-size: 10px; }
 .kb-val { font-size: 11px; font-weight: 600; fill: var(--color-fg); text-anchor: middle; font-family: var(--font-anthropic-sans); }
 .kb-axis-title { font-size: 11.5px; fill: var(--color-fg-muted); text-anchor: middle; font-family: var(--font-anthropic-sans); }
 .kb-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; margin-top: 6px; font-size: 12px; color: var(--color-fg-muted); }
@@ -440,10 +440,11 @@ body { color: var(--color-fg); -webkit-font-smoothing: antialiased; }
     svg.append('g').selectAll('text').data(data).join('text')
       .attr('class', 'kb-tick').attr('x', (r) => x(r.axis) + x.bandwidth() / 2)
       .attr('y', H - 8).attr('text-anchor', 'middle').text((r) => r.axis);
+    addLegend(el, [{ name: 'Earlier months', color: 'var(--kb-teal)' }, { name: 'Latest month (' + data[last].axis + ')', color: 'var(--kb-navy)' }]);
   }
 
   function groupedChart(el, rows, series, o) {
-    const H = 232, top = 16, bottom = 26, mr = 8;
+    const H = 232, top = 22, bottom = 26, mr = 8;
     const fr = frame(el, H);
     const W = fr.W, svg = fr.svg;
     svg.attr('role', 'img').attr('aria-label', o.name);
@@ -470,6 +471,11 @@ body { color: var(--color-fg); -webkit-font-smoothing: antialiased; }
         color: s.color, text: o.line(s, d.r)
       }))))
       .on('pointerleave', () => tip.hide());
+    if (x1.bandwidth() >= 28) {
+      groups.selectAll('text').data((r) => series.map((s) => ({ r, s }))).join('text')
+        .attr('class', 'kb-val kb-val-sm').attr('x', (d) => x1(d.s.key) + x1.bandwidth() / 2)
+        .attr('y', (d) => y(d.r[d.s.key]) - 5).text((d) => o.label(d.r[d.s.key]));
+    }
     svg.append('g').selectAll('text').data(rows).join('text')
       .attr('class', 'kb-tick').attr('x', (r) => x0(r.axis) + x0.bandwidth() / 2)
       .attr('y', H - 8).attr('text-anchor', 'middle').text((r) => r.axis);
@@ -496,7 +502,7 @@ body { color: var(--color-fg); -webkit-font-smoothing: antialiased; }
       { key: 'direct_sessions', share: 'direct_share', name: 'Direct', color: 'var(--kb-navy)' },
       { key: 'paid_search_sessions', share: 'paid_search_share', name: 'Paid Search', color: 'var(--kb-teal)' },
       { key: 'email_sessions', share: 'email_share', name: 'Email', color: 'var(--kb-yellow)' }
-    ], { name: 'Sessions by channel', tick: (v) => f.int(v), line: (s, r) => s.name + ': ' + f.int(r[s.key]) + ' sessions (' + f.pct1(r[s.share]) + ' of total)' }));
+    ], { name: 'Sessions by channel', tick: (v) => f.int(v), label: (v) => f.int(v), line: (s, r) => s.name + ': ' + f.int(r[s.key]) + ' sessions (' + f.pct1(r[s.share]) + ' of total)' }));
     one('#chart-cash', ['cash_monthly'], (el, rows) => barChart(el, rows, {
       y: 'value_per_day', name: 'Revenue per day', fmt: f.usd0, tick: (v) => f.usd0(v), tip: (r) => f.usd0(r.value_per_day) + ' a day'
     }));
@@ -504,7 +510,7 @@ body { color: var(--color-fg); -webkit-font-smoothing: antialiased; }
       { key: 'qld', name: 'QLD', color: 'var(--kb-navy)' },
       { key: 'nsw', name: 'NSW', color: 'var(--kb-teal)' },
       { key: 'vic', name: 'VIC', color: 'var(--kb-yellow)' }
-    ], { name: 'Booking value by state', tick: kTick, line: (s, r) => s.name + ': ' + f.usd0(r[s.key]) }));
+    ], { name: 'Booking value by state', tick: kTick, label: (v) => '$' + d3.format('.1f')(v / 1000) + 'k', line: (s, r) => s.name + ': ' + f.usd0(r[s.key]) }));
     one('#chart-ads-spend', ['ads_monthly'], (el, rows) => barChart(el, rows, {
       y: 'spend_per_day', name: 'Ad spend per day', fmt: f.usd0, tick: (v) => f.usd0(v), tip: (r) => f.usd0(r.spend_per_day) + ' a day'
     }));
